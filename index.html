@@ -129,5 +129,33 @@
         </div>
     </footer>
 
+<audio id="bgMusic" loop>
+        <source src="/public/musik-workshop.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicToggleBtn" onclick="toggleMusic()">
+        <i class="fa-solid fa-music"></i>
+        <span>Putar Musik</span>
+    </button>
+
+    <script>
+        var myMusic = document.getElementById("bgMusic");
+        var musicBtn = document.getElementById("musicToggleBtn");
+        var isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                myMusic.pause();
+                musicBtn.innerHTML = '<i class="fa-solid fa-music"></i><span>Putar Musik</span>';
+                musicBtn.classList.remove("playing");
+            } else {
+                myMusic.play();
+                musicBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i><span>Matikan Suara</span>';
+                musicBtn.classList.add("playing");
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+
 </body>
 </html>

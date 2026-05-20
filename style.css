@@ -277,6 +277,38 @@ h1, h2, h3 {
     padding: 0 15px;
 }
 
+/* PENGATURAN TOMBOL MUSIK MELAYANG */
+#musicToggleBtn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Muncul di pojok kiri bawah */
+    z-index: 1000;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+#musicToggleBtn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Warna tombol saat musik sedang menyala */
+#musicToggleBtn.playing {
+    background-color: var(--accent-color); /* Warna hijau */
+}
+
 
 /* =========================================
    RESPONSIVE MOBILE KHUSUS NARASUMBER
