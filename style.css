@@ -2,8 +2,8 @@
    1. VARIABEL WARNA & RESET
    ========================================= */
 :root {
-    --primary-color: #0B192C; 
-    --secondary-color: #1A365D; 
+    --primary-color: #3967a8; 
+    --secondary-color: #1b509a; 
     --accent-color: #25D366; 
     --text-dark: #333333;
     --text-light: #F8FAFC;
@@ -41,6 +41,7 @@ h1, h2, h3 {
 
 /* HEADER / HERO */
 .hero {
+    position: relative;
     background: linear-gradient(rgba(11, 25, 44, 0.7), rgba(11, 25, 44, 0.8)), url('/public/bg-header.png') center/cover no-repeat;
     height: 60vh;
     min-height: 500px;
@@ -67,25 +68,45 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 
-/* VISI MISI SECTION */
+/* PENGATURAN 3 LOGO HEADER */
+.hero-logos {
+    position: absolute; /* Melepaskan logo dari arus utama agar bisa menempel di atap */
+    top: 30px; /* Jarak dari batas atas layar */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Posisikan ketiga logo di tengah layar */
+    gap: 30px; /* Jarak spasi antar logo */
+    z-index: 10;
+}
+
+.hero-logos img {
+    height: 70px; /* Atur ukuran logo di sini (buat lebih kecil/besar sesuai selera) */
+    width: auto;
+    object-fit: contain; /* Memastikan logo tidak lonjong/gepeng */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); /* Memberi bayangan tipis agar logo terlihat jelas meski background terang */
+}
+
+/* VISI MISI SECTION (ATAS-BAWAH) */
 .visi-misi {
     display: flex;
+    flex-direction: column; 
     align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    padding: 80px 40px;
+    gap: 30px;
+    padding: 60px 40px;
     background-color: var(--white);
     margin-top: -40px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     position: relative;
     z-index: 10;
+    text-align: center; 
 }
 
 .visi-misi-images {
-    flex: 1;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
 .visi-misi-images img {
@@ -94,7 +115,8 @@ h1, h2, h3 {
 }
 
 .visi-misi-text {
-    flex: 1.2;
+    width: 100%;
+    max-width: 800px; 
 }
 
 .visi-misi-text h2 {
@@ -113,10 +135,16 @@ h1, h2, h3 {
 }
 
 .visi, .misi { margin-bottom: 25px; }
-.misi ol { padding-left: 20px; }
+
+.misi ol { 
+    padding-left: 20px; 
+    text-align: left; 
+    display: inline-block; 
+}
+
 .misi li { margin-bottom: 10px; }
 
-/* KEGIATAN SECTION */
+/* KEGIATAN SECTION (ATAS-BAWAH) */
 .kegiatan {
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     padding: 80px 0;
@@ -126,8 +154,8 @@ h1, h2, h3 {
 
 .kegiatan-wrapper {
     display: flex;
+    flex-direction: column; 
     align-items: center;
-    justify-content: space-between;
     gap: 40px;
 }
 
@@ -136,7 +164,8 @@ h1, h2, h3 {
     color: var(--text-dark);
     padding: 40px;
     border-radius: 12px;
-    flex: 1;
+    width: 100%;
+    max-width: 800px; 
     box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
@@ -162,16 +191,17 @@ h1, h2, h3 {
 }
 
 .kegiatan-info {
-    flex: 0.8;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
 }
 
 .info-item {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     font-size: 1.1rem;
 }
 
@@ -180,7 +210,10 @@ h1, h2, h3 {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* NARASUMBER SECTION */
+/* =========================================
+   NARASUMBER SECTION 
+   (1 Utama di Atas, 3 Pendukung di Bawah)
+   ========================================= */
 .narasumber {
     padding: 60px 20px;
     text-align: center;
@@ -192,12 +225,30 @@ h1, h2, h3 {
     margin-bottom: 50px;
 }
 
-.narasumber-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+/* -- PENGATURAN DESKTOP -- */
+
+/* 1. Baris Atas (1 Narasumber) */
+.narasumber-solo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; /* Jarak antara baris atas dan bawah */
 }
 
+.narasumber-card-utama {
+    max-width: 300px; /* Ukuran ideal untuk desktop */
+    width: 100%;
+}
+
+/* 2. Baris Bawah (3 Narasumber Berjejer) */
+.narasumber-grid-tiga {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Angka 3 ini adalah kunci sejajar ke kanan */
+    gap: 30px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* 3. Gaya Visual Kartu (Card) */
 .narasumber-card {
     background: var(--white);
     border-radius: 12px;
@@ -207,7 +258,9 @@ h1, h2, h3 {
     padding-bottom: 20px;
 }
 
-.narasumber-card:hover { transform: translateY(-10px); }
+.narasumber-card:hover { 
+    transform: translateY(-10px); 
+}
 
 .narasumber-card img {
     width: 100%;
@@ -218,9 +271,45 @@ h1, h2, h3 {
 
 .narasumber-card h3 {
     font-size: 1rem;
+    line-height: 1.4;
     color: var(--primary-color);
     margin-top: 20px;
     padding: 0 15px;
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE KHUSUS NARASUMBER
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* Perkecil sedikit kartu utama agar pas di layar HP */
+    .narasumber-card-utama {
+        max-width: 260px;
+        margin-bottom: 10px;
+    }
+
+    /* Ubah 3 kolom menjadi 1 kolom (menumpuk ke bawah) agar rapi & jelas */
+    .narasumber-grid-tiga {
+        grid-template-columns: 1fr; 
+        max-width: 260px; /* Disamakan dengan ukuran kartu utama */
+        gap: 25px;
+    }
+
+    /* Sesuaikan tinggi foto di HP agar proporsional */
+    .narasumber-card img {
+        height: 260px;
+    }
+
+    /* Perkecil ukuran dan jarak logo di layar HP */
+    .hero-logos {
+        top: 20px;
+        gap: 15px;
+    }
+    
+    .hero-logos img {
+        height: 45px; 
+    }
 }
 
 /* FOOTER / PENDAFTARAN */
@@ -313,178 +402,27 @@ h1, h2, h3 {
    3. MEDIA QUERIES (RESPONSIVE KHUSUS MOBILE)
    ========================================= */
 
-/* Untuk Tablet dan Layar Lebih Kecil (Max width 992px) */
 @media (max-width: 992px) {
-    .narasumber-grid {
-        /* Ubah jadi 2 kolom untuk tablet */
-        grid-template-columns: repeat(2, 1fr); 
-    }
+    
 }
 
-/* Untuk HP (Max width 768px) */
 @media (max-width: 768px) {
-    
-/* Tambahkan ini di dalam @media (max-width: 768px) Anda */
-    .kegiatan-info {
-        flex-direction: column; /* Tempat dan Tanggal menumpuk di HP */
-        align-items: center;
-        text-align: center;
-        gap: 30px;
-    }
-    
-    .info-item {
-        flex-direction: column; /* Ikon di atas, teks di bawah */
-        gap: 10px;
-    }
-
     /* Hero Section */
     .hero { min-height: 400px; }
     .hero h1 { font-size: 2.2rem; }
     .hero p { font-size: 0.9rem; }
 
-    /* VISI MISI SECTION */
-.visi-misi {
-    display: flex;
-    flex-direction: column; /* Mengubah posisi menjadi atas-bawah */
-    align-items: center;
-    gap: 30px;
-    padding: 60px 40px;
-    background-color: var(--white);
-    margin-top: -40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    position: relative;
-    z-index: 10;
-    text-align: center; /* Membuat judul ke tengah */
-}
 
-.visi-misi-images {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.visi-misi-images img {
-    width: 200px;
-    object-fit: cover;
-}
-
-.visi-misi-text {
-    width: 100%;
-    max-width: 800px; /* Menjaga agar teks tidak terlalu melebar ke ujung layar */
-}
-
-.visi-misi-text h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 30px;
-    border-bottom: 3px solid var(--secondary-color);
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.visi-misi-text h3 {
-    font-size: 1.2rem;
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-
-.visi, .misi { margin-bottom: 25px; }
-
-.misi ol { 
-    padding-left: 20px; 
-    text-align: left; /* Poin-poin misi tetap rata kiri agar mudah dibaca */
-    display: inline-block; 
-}
-
-.misi li { margin-bottom: 10px; }
+    /* Visi Misi Section */
+    .visi-misi { padding: 40px 20px; }
+    .visi-misi-images img { width: 150px; }
 
     /* Kegiatan Section */
-    /* KEGIATAN SECTION */
-.kegiatan {
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    padding: 80px 0;
-    color: var(--white);
-    margin: 60px 0;
-}
-
-.kegiatan-wrapper {
-    display: flex;
-    flex-direction: column; /* Menumpuk Kotak Kegiatan (atas) dan Info (bawah) */
-    align-items: center;
-    gap: 40px;
-}
-
-.kegiatan-card {
-    background-color: var(--white);
-    color: var(--text-dark);
-    padding: 40px;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 800px; /* Menjaga kotak kegiatan tetap proporsional */
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-}
-
-.kegiatan-card h2 {
-    color: var(--primary-color);
-    margin-bottom: 25px;
-    font-size: 1.8rem;
-    text-align: center;
-}
-
-.kegiatan-card ul { list-style: none; }
-.kegiatan-card li {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-weight: 500;
-}
-
-.kegiatan-card li i {
-    color: var(--secondary-color);
-    margin-top: 4px;
-}
-
-.kegiatan-info {
-    display: flex;
-    flex-direction: row; /* Tempat dan Tanggal berdampingan */
-    justify-content: center;
-    gap: 60px;
-    width: 100%;
-}
-
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 1.1rem;
-}
-
-.info-item i {
-    font-size: 2.5rem;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-    /* Narasumber Section */
-    .narasumber-grid {
-        /* Tetap 2 kolom untuk HP sesuai blueprint desain kita, 
-           tapi beri jarak sedikit lebih rapat */
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px; 
-    }
-    
-    .narasumber-card img {
-        height: 200px; /* Sesuaikan tinggi foto di HP */
-    }
-
-    /* Footer / Pendaftaran Section */
-    .footer-wrapper {
-        flex-direction: column; /* Tumpuk ke bawah */
-        gap: 60px;
-    }
-    
-    .btn-register, .btn-whatsapp {
-        max-width: 100%; /* Tombol memenuhi lebar layar HP */
+    .kegiatan-card { padding: 30px 20px; }
+    .kegiatan-info {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        gap: 30px;
     }
 }
