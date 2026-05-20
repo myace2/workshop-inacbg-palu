@@ -423,8 +423,8 @@ h1, h2, h3 {
     font-weight: 600;
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 300px;
+    width: 90%;
+    max-width: 250px;
 }
 
 .btn-whatsapp:hover { background-color: #1da851; }
