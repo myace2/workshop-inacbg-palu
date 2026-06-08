@@ -127,6 +127,7 @@ h4 {
     /* Lebar disamakan */
 }
 
+
 /* KUNCI MERATAKAN: Samakan tinggi gambar dan jangkar ke bawah */
 .profile-item img {
     width: 200px;
@@ -149,7 +150,6 @@ h4 {
     display: flex;
     align-items: center;
 }
-
 /* Pengaturan Teks Jabatan */
 .profile-item p {
     font-size: 0.9rem;
@@ -157,6 +157,7 @@ h4 {
     font-weight: 500;
     margin: 0;
 }
+
 
 .visi-misi-images img {
     width: 200px;
@@ -386,6 +387,14 @@ h4 {
 
 .pemateri-label {
     margin-top: 20px;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profile-item .speaker {
+    margin-top: 0px;
     color: var(--accent-color);
     font-size: 0.9rem;
     text-transform: uppercase;
