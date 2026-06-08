@@ -2,9 +2,9 @@
    1. VARIABEL WARNA & RESET
    ========================================= */
 :root {
-    --primary-color: #3967a8; 
-    --secondary-color: #1b509a; 
-    --accent-color: #25D366; 
+    --primary-color: #3967a8;
+    --secondary-color: #1b509a;
+    --accent-color: #25D366;
     --text-dark: #333333;
     --text-light: #F8FAFC;
     --white: #FFFFFF;
@@ -34,7 +34,10 @@ body {
     padding: 0 20px;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
 }
 
@@ -86,30 +89,31 @@ h1, h2, h3, h4 {
     height: 70px;
     width: auto;
     object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 /* VISI MISI SECTION */
 .visi-misi {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     gap: 30px;
     padding: 60px 40px;
     background-color: var(--white);
     margin-top: -40px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     position: relative;
     z-index: 10;
-    text-align: center; 
+    text-align: center;
 }
 
 /* Pastikan jarak antar profil rapi */
 .visi-misi-images {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Memastikan bingkai profil sejajar di atas */
+    align-items: flex-start;
+    /* Memastikan bingkai profil sejajar di atas */
     gap: 40px;
 }
 
@@ -119,15 +123,19 @@ h1, h2, h3, h4 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 250px; /* Lebar disamakan */
+    width: 250px;
+    /* Lebar disamakan */
 }
 
 /* KUNCI MERATAKAN: Samakan tinggi gambar dan jangkar ke bawah */
 .profile-item img {
     width: 200px;
-    height: 280px; /* Tinggi gambar dikunci agar sama rata */
-    object-fit: contain; /* Menjaga agar gambar tidak gepeng */
-    object-position: bottom; /* Menyejajarkan bagian bawah foto (potongan baju) */
+    height: 280px;
+    /* Tinggi gambar dikunci agar sama rata */
+    object-fit: contain;
+    /* Menjaga agar gambar tidak gepeng */
+    object-position: bottom;
+    /* Menyejajarkan bagian bawah foto (potongan baju) */
 }
 
 /* Pengaturan Teks Nama */
@@ -136,7 +144,8 @@ h1, h2, h3, h4 {
     color: var(--primary-color);
     margin-top: 15px;
     margin-bottom: 5px;
-    height: 50px; /* Memberi ruang seragam jika ada nama yang lebih panjang */
+    height: 50px;
+    /* Memberi ruang seragam jika ada nama yang lebih panjang */
     display: flex;
     align-items: center;
 }
@@ -156,7 +165,7 @@ h1, h2, h3, h4 {
 
 .visi-misi-text {
     width: 100%;
-    max-width: 800px; 
+    max-width: 800px;
 }
 
 .visi-misi-text h2 {
@@ -174,15 +183,81 @@ h1, h2, h3, h4 {
     margin-bottom: 10px;
 }
 
-.visi, .misi { margin-bottom: 25px; }
-
-.misi ol { 
-    padding-left: 20px; 
-    text-align: left; 
-    display: inline-block; 
+.visi,
+.misi {
+    margin-bottom: 25px;
 }
 
-.misi li { margin-bottom: 10px; }
+.misi ol {
+    padding-left: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+.misi li {
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   LATAR BELAKANG SECTION (TAMBAHAN BARU)
+   ========================================= */
+.latar-belakang {
+    padding: 60px 20px 20px 20px;
+    text-align: center;
+}
+
+.section-title-alt {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.latar-belakang-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.latar-belakang-card-text {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.latar-icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(57, 103, 168, 0.1);
+    color: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.latar-belakang-card-text h3 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.latar-belakang-card-text p {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
 
 /* KEGIATAN SECTION */
 .kegiatan {
@@ -194,7 +269,7 @@ h1, h2, h3, h4 {
 
 .kegiatan-wrapper {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     gap: 40px;
 }
@@ -205,8 +280,8 @@ h1, h2, h3, h4 {
     padding: 40px;
     border-radius: 12px;
     width: 100%;
-    max-width: 800px; 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    max-width: 800px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .kegiatan-card h2 {
@@ -216,7 +291,10 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
-.kegiatan-card ul { list-style: none; }
+.kegiatan-card ul {
+    list-style: none;
+}
+
 .kegiatan-card li {
     margin-bottom: 15px;
     display: flex;
@@ -232,7 +310,7 @@ h1, h2, h3, h4 {
 
 .kegiatan-info {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: center;
     gap: 60px;
     width: 100%;
@@ -253,68 +331,59 @@ h1, h2, h3, h4 {
 /* =========================================
    NARASUMBER SECTION (DIRAPIKAN)
    ========================================= */
+/* =========================================
+   NARASUMBER SECTION (MODERN UTAMA)
+   ========================================= */
 .narasumber {
     padding: 60px 20px;
     text-align: center;
 }
 
-.section-title {
-    font-size: 2.2rem;
-    color: var(--primary-color);
-    margin-bottom: 50px;
-}
-
-/* Baris Atas (1 Narasumber) */
-.narasumber-solo-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px; 
-}
-
-.narasumber-card-utama {
-    max-width: 300px;
-    width: 100%;
-}
-
-/* Baris Bawah (3 Narasumber) dengan CSS Grid */
-.narasumber-grid-tiga {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Gaya Visual Kartu */
+/* Base Card Style */
 .narasumber-card {
     background: var(--white);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding-bottom: 25px;
-    
-    /* Center alignment for card content */
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
 }
 
-.narasumber-card:hover { 
-    transform: translateY(-10px); 
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+.narasumber-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .narasumber-card img {
     width: 100%;
-    height: 280px;
+    height: 260px;
     object-fit: cover;
     object-position: top;
-    background-color: #e2e8f0; /* Soft background if image is transparent */
+    background-color: #e2e8f0;
 }
 
-/* Teks dalam kartu */
+/* Sistem Grid Cerdas Desktop (1 di atas tengah, 3 di bawah) */
+.narasumber-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat susunan dasar 3 kolom */
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Memaksa kartu pertama (Pemateri BLUD) mengambil ruang 3 kolom penuh dan mejeng di tengah */
+.narasumber-card-utama {
+    grid-column: 1 / -1; 
+    justify-self: center;
+    width: 100%;
+    max-width: 280px; /* Ukurannya pas, tidak melar raksasa */
+    margin-bottom: 20px;
+}
+
 .pemateri-label {
     margin-top: 20px;
     color: var(--accent-color);
@@ -360,7 +429,8 @@ h1, h2, h3, h4 {
     letter-spacing: 1px;
 }
 
-.daftar-col, .contact-col {
+.daftar-col,
+.contact-col {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -422,7 +492,9 @@ h1, h2, h3, h4 {
     max-width: 250px;
 }
 
-.btn-whatsapp:hover { background-color: #1da851; }
+.btn-whatsapp:hover {
+    background-color: #1da851;
+}
 
 /* TOMBOL MUSIK */
 #musicToggleBtn {
@@ -439,7 +511,7 @@ h1, h2, h3, h4 {
     font-weight: 500;
     font-size: 0.9rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -459,39 +531,193 @@ h1, h2, h3, h4 {
    3. MEDIA QUERIES (MOBILE RESPONSIVE)
    ========================================= */
 @media (max-width: 768px) {
+
+    /* =========================================
+   LATAR BELAKANG SECTION (TAMBAHAN BARU)
+   ========================================= */
+    .latar-belakang {
+        padding: 60px 20px 20px 20px;
+        text-align: center;
+    }
+
+    .section-title-alt {
+        font-size: 2.2rem;
+        color: var(--primary-color);
+        margin-bottom: 40px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .latar-belakang-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .latar-belakang-card-text {
+        background: var(--white);
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 4px solid var(--secondary-color);
+    }
+
+    .latar-icon-box {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(57, 103, 168, 0.1);
+        color: var(--primary-color);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .latar-belakang-card-text h3 {
+        font-size: 1.3rem;
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+    }
+
+    .latar-belakang-card-text p {
+        font-size: 0.95rem;
+        color: var(--text-dark);
+        line-height: 1.7;
+    }
+
+    .section-title-alt {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .latar-belakang-grid {
+        grid-template-columns: 1fr;
+        /* Menjadi 1 kolom di HP */
+        gap: 20px;
+    }
+
+    .latar-belakang-card-text {
+        padding: 30px 20px;
+    }
+
     /* Hero Section */
-    .hero { min-height: 400px; }
-    .hero h1 { font-size: 2.2rem; }
-    .hero p { font-size: 0.9rem; }
-    .hero-logos { top: 20px; gap: 15px; }
-    .hero-logos img { height: 45px; }
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-logos {
+        top: 20px;
+        gap: 15px;
+    }
+
+    .hero-logos img {
+        height: 45px;
+    }
+
+    .visi-misi-images {
+        flex-direction: column; /* Membuat foto menumpuk ke bawah di HP */
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .profile-item {
+        width: 100%; /* Memanfaatkan lebar layar HP sepenuhnya */
+        max-width: 280px; /* Membatasi agar foto tidak terlalu raksasa */
+    }
+
+    .profile-item img {
+        width: 100%;
+        height: auto; /* Mengikuti proporsi asli foto agar tidak gepeng/terpotong */
+        max-height: 320px;
+        object-fit: contain;
+    }
+
+    .profile-item h4 {
+        height: auto; /* Mengembalikan tinggi otomatis agar nama panjang tidak terpotong */
+        margin-top: 10px;
+        font-size: 1.1rem;
+        justify-content: center;
+    }
 
     /* Visi Misi Section */
-    .visi-misi { padding: 40px 20px; }
-    .visi-misi-images img { width: 150px; }
+    .visi-misi {
+        padding: 40px 20px;
+    }
+
+    .visi-misi-images img {
+        width: 150px;
+    }
+
 
     /* Kegiatan Section */
-    .kegiatan-card { padding: 30px 20px; }
+    .kegiatan-card {
+        padding: 30px 20px;
+    }
+
     .kegiatan-info {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 30px;
     }
 
-    /* Narasumber Section */
+    .narasumber {
+        padding: 30px 15px; /* Memangkas space luar yang terlalu jauh */
+    }
+
+    /* Transformasi Grid menjadi 2x2 Simetris */
+    .narasumber-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr); /* 2 Kolom sejajar di HP */
+        gap: 15px; /* Jarak antar kartu lebih rapat & manis */
+    }
+
+    /* Mengembalikan kartu utama agar tunduk pada aturan grid 2x2 */
     .narasumber-card-utama {
+        grid-column: auto; 
+        justify-self: stretch;
         max-width: 100%;
+        margin-bottom: 0;
     }
-    
-    .narasumber-grid-tiga {
-        grid-template-columns: 1fr; /* Berubah jadi 1 kolom menyusun ke bawah di HP */
-        gap: 25px;
-    }
-    
+
+    /* Mengubah tinggi gambar di HP agar wajah proporsional dan dahi tidak terpotong */
     .narasumber-card img {
-        height: auto;
-        aspect-ratio: 1/1; /* Memastikan rasio foto tetap bagus di HP */
+        height: 170px; 
+        object-fit: cover;
+        object-position: top;
+    }
+
+    /* Optimalisasi skala teks kartu pada layar HP */
+    .pemateri-label {
+        margin-top: 10px;
+        font-size: 0.75rem;
+    }
+
+    .narasumber-card h3 {
+        font-size: 0.85rem;
+        margin: 8px 8px 4px 8px;
+    }
+
+    .narasumber-card p {
+        font-size: 0.75rem;
+        padding: 0 8px;
+        line-height: 1.4;
     }
 
     /* Footer */
